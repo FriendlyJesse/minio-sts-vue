@@ -6,6 +6,7 @@ import { S3Client, ListObjectsV2Command } from '@aws-sdk/client-s3'
 async function getTemporaryCredentialsFromServer() {
   const stsClient = new STSClient({
     endpoint: 'https://oss.hubx.pro/',
+    region: 'us-east-1'
   })
 
   // 创建 AssumeRoleWithWebIdentity 命令的参数
